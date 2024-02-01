@@ -1,6 +1,5 @@
 package com.example.Test_Uppgift.models;
 
-import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -11,16 +10,17 @@ public class BorrowedBooks {
 
     @Id
     private String id;
-    private String BooksId;
-    private String UserId;
-    @CreatedDate
-    private Date date;
+    private String booksId;
+    private String userId;
+    private Date borrowedDate;
+    private Date returnDate;
 
-    public BorrowedBooks(String id, String booksId, String userId, Date date) {
+    public BorrowedBooks(String id, String booksId, String userId, Date borrowedDate, Date returnDate) {
         this.id = id;
-        BooksId = booksId;
-        UserId = userId;
-        this.date = date;
+        this.booksId = booksId;
+        this.userId = userId;
+        this.borrowedDate = borrowedDate;
+        this.returnDate = returnDate;
     }
 
     public String getId() {
@@ -32,26 +32,36 @@ public class BorrowedBooks {
     }
 
     public String getBooksId() {
-        return BooksId;
+        return booksId;
     }
 
     public void setBooksId(String booksId) {
-        BooksId = booksId;
+        this.booksId = booksId;
     }
 
     public String getUserId() {
-        return UserId;
+        return userId;
     }
 
     public void setUserId(String userId) {
-        UserId = userId;
+        this.userId = userId;
     }
 
-    public Date getDate() {
-        return date;
+    public Date getBorrowedDate() {
+        return borrowedDate;
     }
 
-    public void setDate(Date date) {
-        this.date = date;
+    public void setBorrowedDate(Date borrowedDate) {
+        this.borrowedDate = borrowedDate;
     }
+
+    public Date getReturnDate() {
+        return returnDate;
+    }
+
+    public void setReturnDate(Date returnDate) {
+        this.returnDate = returnDate;
+    }
+
 }
+
