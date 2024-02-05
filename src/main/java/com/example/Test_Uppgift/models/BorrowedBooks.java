@@ -69,7 +69,6 @@ public class BorrowedBooks {
     public void setReturnDate(Date returnDate) {
         this.returnDate = returnDate;
     }
-
 }
 
 

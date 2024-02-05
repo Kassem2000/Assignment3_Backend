@@ -44,6 +44,4 @@ public class UserControllers {
         return userServices.deleteUser(id);
     }
 
-
-
 }
