@@ -1,26 +1,33 @@
 package com.example.Test_Uppgift.models;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 @Document(collection = "BorrowedBooks")
 public class BorrowedBooks {
 
     @Id
     private String id;
-    private String booksId;
-    private String userId;
+    private List<String> booksId = new ArrayList<>();
+    @DBRef
+    private User userId;
     private Date borrowedDate;
     private Date returnDate;
 
-    public BorrowedBooks(String id, String booksId, String userId, Date borrowedDate, Date returnDate) {
+    public BorrowedBooks(String id, List<String> booksId, User userId, Date borrowedDate, Date returnDate) {
         this.id = id;
         this.booksId = booksId;
         this.userId = userId;
         this.borrowedDate = borrowedDate;
         this.returnDate = returnDate;
+    }
+
+    public BorrowedBooks() {
     }
 
     public String getId() {
@@ -31,19 +38,19 @@ public class BorrowedBooks {
         this.id = id;
     }
 
-    public String getBooksId() {
+    public List<String> getBooksId() {
         return booksId;
     }
 
-    public void setBooksId(String booksId) {
+    public void setBooksId(List<String> booksId) {
         this.booksId = booksId;
     }
 
-    public String getUserId() {
+    public User getUserId() {
         return userId;
     }
 
-    public void setUserId(String userId) {
+    public void setUserId(User userId) {
         this.userId = userId;
     }
 
@@ -64,4 +71,5 @@ public class BorrowedBooks {
     }
 
 }
+
 
