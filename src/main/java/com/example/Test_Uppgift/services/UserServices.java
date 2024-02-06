@@ -34,5 +34,4 @@ public class UserServices {
         return "User is deleted";
     }
 
-
 }
