@@ -1,7 +1,7 @@
-Steg 1: Clona min kod på Github
+Step 1: Clone my code on Github
 
-Steg 2: Tryck på filen resources sedan tryck på application.properties och koppla in din atlas länk.
+Step 2: Tap the file resources then tap application.properties and plug in your atlas link.
 
-Steg 3: Du har all info på postman här -> https://documenter.getpostman.com/view/32298116/2s9YywfzPf  
+Step 3: You have all the info on postman here -> https://documenter.getpostman.com/view/32298116/2s9YywfzPf  
 
 Simple backend assigment! [backend_uppgift1.pdf](https://github.com/Kassem2000/Uppgift3_Backend/files/15304601/backend_uppgift1.pdf)
